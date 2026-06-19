@@ -11,7 +11,7 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -39,7 +39,7 @@ function HomepageHeader() {
           </button>
         </div>
         <div className="margin-top--lg" style={{ opacity: 0.8 }}>
-          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
+          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs/api-reference" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
         </div>
       </div>
     </header>
