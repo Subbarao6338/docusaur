@@ -19,27 +19,30 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-            style={{ borderRadius: '12px', padding: '12px 32px', fontWeight: 'bold' }}>
+            className={clsx('button button--secondary button--lg', styles.getStartedBtn)}
+            to="/docs/intro">
             Get Started
           </Link>
           <button
-            className="button button--outline button--secondary button--lg margin-left--md"
+            className={clsx('button button--outline button--secondary button--lg', styles.searchBtn)}
             onClick={() => {
-              const isMac = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+              const isMac = typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform);
               window.dispatchEvent(new KeyboardEvent('keydown', {
                 key: 'k',
                 ctrlKey: !isMac,
                 metaKey: isMac
               }));
-            }}
-            style={{ borderRadius: '12px', padding: '12px 24px' }}>
-            Search <span style={{ opacity: 0.6, marginLeft: '8px', fontSize: '0.8em' }}>{typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? '⌘K' : 'Ctrl+K'}</span>
+            }}>
+            Search <span className={styles.searchShortcut}>{typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? '⌘K' : 'Ctrl+K'}</span>
           </button>
         </div>
-        <div className="margin-top--lg" style={{ opacity: 0.8 }}>
-          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs/api-reference" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
+        <div className={styles.popularSection}>
+          <p>Popular:</p>
+          <div className={styles.popularList}>
+            <Link to="/docs/intro" className={styles.chip}>Tutorial</Link>
+            <Link to="/technical-docs/api-reference" className={styles.chip}>API Reference</Link>
+            <Link to="/guides/intro" className={styles.chip}>User Guides</Link>
+          </div>
         </div>
       </div>
     </header>

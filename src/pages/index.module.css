@@ -20,4 +20,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+
+.getStartedBtn {
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-weight: bold;
+}
+
+.searchBtn {
+  border-radius: 12px;
+  padding: 12px 24px;
+}
+
+.searchShortcut {
+  opacity: 0.6;
+  margin-left: 8px;
+  font-size: 0.8em;
+}
+
+.popularSection {
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+.popularList {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background-color: var(--m3-surface-variant);
+  color: var(--m3-on-surface-variant);
+  padding: 4px 16px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--m3-outline);
+}
+
+.chip:hover {
+  background-color: var(--m3-outline);
+  color: var(--m3-surface);
+  transform: translateY(-1px);
 }
