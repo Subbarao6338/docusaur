@@ -20,9 +20,26 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/intro"
+            style={{ borderRadius: '12px', padding: '12px 32px', fontWeight: 'bold' }}>
+            Get Started
           </Link>
+          <button
+            className="button button--outline button--secondary button--lg margin-left--md"
+            onClick={() => {
+              const isMac = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+              window.dispatchEvent(new KeyboardEvent('keydown', {
+                key: 'k',
+                ctrlKey: !isMac,
+                metaKey: isMac
+              }));
+            }}
+            style={{ borderRadius: '12px', padding: '12px 24px' }}>
+            Search <span style={{ opacity: 0.6, marginLeft: '8px', fontSize: '0.8em' }}>{typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform) ? '⌘K' : 'Ctrl+K'}</span>
+          </button>
+        </div>
+        <div className="margin-top--lg" style={{ opacity: 0.8 }}>
+          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
         </div>
       </div>
     </header>
