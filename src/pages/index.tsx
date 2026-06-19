@@ -39,7 +39,7 @@ function HomepageHeader() {
           </button>
         </div>
         <div className="margin-top--lg" style={{ opacity: 0.8 }}>
-          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
+          <p>Popular: <Link to="/docs/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>Tutorial</Link>, <Link to="/technical-docs/api-reference" style={{ color: 'inherit', textDecoration: 'underline' }}>API Reference</Link>, <Link to="/guides/intro" style={{ color: 'inherit', textDecoration: 'underline' }}>User Guides</Link></p>
         </div>
       </div>
     </header>
