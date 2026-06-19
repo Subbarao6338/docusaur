@@ -1,0 +1,93 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Material You (M3) inspired color palette */
+:root {
+  /* Light Theme */
+  --ifm-color-primary: #006a6a;
+  --ifm-color-primary-dark: #006060;
+  --ifm-color-primary-darker: #005a5a;
+  --ifm-color-primary-darkest: #004a4a;
+  --ifm-color-primary-light: #007474;
+  --ifm-color-primary-lighter: #007a7a;
+  --ifm-color-primary-lightest: #008a8a;
+
+  --ifm-background-color: #f4fbfa;
+  --ifm-navbar-background-color: #f4fbfa;
+  --ifm-footer-background-color: #f4fbfa;
+
+  /* M3 surface colors */
+  --m3-surface: #f4fbfa;
+  --m3-on-surface: #191c1c;
+  --m3-surface-variant: #dae5e4;
+  --m3-on-surface-variant: #3f4948;
+  --m3-outline: #6f7979;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Material You Rounding */
+  --ifm-global-radius: 16px;
+  --ifm-pagination-nav-border-radius: 16px;
+  --ifm-pre-border-radius: 12px;
+  --ifm-button-border-radius: 20px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* Dark Theme */
+  --ifm-color-primary: #80d5d4;
+  --ifm-color-primary-dark: #70cac9;
+  --ifm-color-primary-darker: #60c0bf;
+  --ifm-color-primary-darkest: #50b0af;
+  --ifm-color-primary-light: #90e0df;
+  --ifm-color-primary-lighter: #a0ebea;
+  --ifm-color-primary-lightest: #b0f5f4;
+
+  --ifm-background-color: #191c1c;
+  --ifm-navbar-background-color: #191c1c;
+  --ifm-footer-background-color: #191c1c;
+
+  /* M3 surface colors */
+  --m3-surface: #191c1c;
+  --m3-on-surface: #e0e3e2;
+  --m3-surface-variant: #3f4948;
+  --m3-on-surface-variant: #bec9c8;
+  --m3-outline: #899392;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Material You Card styles */
+.card {
+  border-radius: 24px;
+  background-color: var(--m3-surface-variant);
+  border: none;
+  padding: 16px;
+  color: var(--m3-on-surface-variant);
+}
+
+/* Navbar adjustments */
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--m3-outline);
+}
+
+/* Sidebar adjustments */
+.menu__link {
+  border-radius: 20px;
+  margin: 2px 4px;
+}
+
+.menu__link--active {
+  background-color: var(--m3-surface-variant);
+  color: var(--m3-on-surface-variant) !important;
+}
+
+/* Doc search/input */
+.navbar__search-input {
+  border-radius: 24px;
+}
